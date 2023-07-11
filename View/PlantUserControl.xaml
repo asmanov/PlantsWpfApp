@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PlantsWpfApp.View.PlantUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PlantsWpfApp.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image />
+        <StackPanel Grid.Column="1">
+            <TextBlock>Popname</TextBlock>
+            <TextBlock>Sname</TextBlock>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+            <StackPanel>
+                <TextBlock>Description</TextBlock>
+                <TextBlock>Good Prop</TextBlock>
+                <TextBlock>Bad Prop</TextBlock>
+                <TextBlock>Location</TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -40,7 +40,7 @@ namespace PlantsWpfApp.Model
         public string GoodProp
         {
             get { return goodProp; }
-            set { goodProp = value; OnPropertyChanged("GoodProp") }
+            set { goodProp = value; OnPropertyChanged("GoodProp"); }
         }
 
         private string description;
@@ -48,7 +48,7 @@ namespace PlantsWpfApp.Model
         public string Description
         {
             get { return description; }
-            set { description = value; OnPropertyChanged("Description") }
+            set { description = value; OnPropertyChanged("Description"); }
         }
 
         private string scienceName;
