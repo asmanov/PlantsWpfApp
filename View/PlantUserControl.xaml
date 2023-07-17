@@ -3,30 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PlantsWpfApp.View"
+             xmlns:local="clr-namespace:PlantsWpfApp.View" xmlns:viewmodel="clr-namespace:PlantsWpfApp.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:PlantViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Image />
-        <StackPanel Grid.Column="1">
-            <TextBlock>Popname</TextBlock>
-            <TextBlock>Sname</TextBlock>
-        </StackPanel>
-        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
-            <StackPanel>
-                <TextBlock>Description</TextBlock>
-                <TextBlock>Good Prop</TextBlock>
-                <TextBlock>Bad Prop</TextBlock>
-                <TextBlock>Location</TextBlock>
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Border>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=PlantImage}"/>
+            <StackPanel Grid.Column="1" Style="{DynamicResource PlantName}">
+                    <TextBlock>Народное название</TextBlock>
+                <Border>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=PopName}"></TextBlock>
+                </Border>
+                    <TextBlock>Научное название</TextBlock>
+                <Border>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=ScienceName}"></TextBlock>
+                </Border>
             </StackPanel>
-        </ScrollViewer>
-    </Grid>
+            <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <TextBlock>Описание</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=Description}"></TextBlock>
+                    <TextBlock>Полезные свойства</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=GoodProp}"></TextBlock>
+                    <TextBlock>Побочные эффекты</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=BedProp}"></TextBlock>
+                    <TextBlock>Ариал обитания</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=PlantLocation}"></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </UserControl>
