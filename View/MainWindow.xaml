@@ -19,7 +19,7 @@
             <DockPanel>
                 <ToggleButton VerticalAlignment="Center" DockPanel.Dock="Right" Style="{StaticResource MaterialDesignSwitchSecondaryToggleButton}" />
                 <StackPanel materialDesign:RippleAssist.IsCentered="True" Orientation="Horizontal">
-                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" />
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"/>
                     
                     <materialDesign:ColorZone
         Margin="16,0,0,0"

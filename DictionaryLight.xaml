@@ -3,14 +3,16 @@
                     xmlns:local="clr-namespace:PlantsWpfApp">
     <Style x:Key="PlantName">
         <Setter Property="ItemsControl.FontFamily" Value="ArialBlack"/>
-        <Setter Property="ItemsControl.Foreground" Value="Black"/>
-        <Setter Property="ItemsControl.FontSize" Value="18"/>
+        <Setter Property="ItemsControl.Foreground" Value="DarkBlue"/>
+        <Setter Property="ItemsControl.FontWeight" Value="ExtraBold"/>
+        <Setter Property="ItemsControl.FontSize" Value="24"/>
         <Setter Property="ItemsControl.Margin" Value="20"/>
         <Setter Property="ItemsControl.BorderBrush" Value="Blue"/>
+        <Setter Property="ItemsControl.HorizontalAlignment" Value="Stretch"/>
     </Style>
     <Style x:Key="UserControl">
         <Setter Property="ItemsControl.Background" Value="#FFE9EA94"/>
-        <Setter Property="ItemsControl.Margin" Value="2"/>
+        <Setter Property="ItemsControl.Margin" Value="10"/>
         <Setter Property="ItemsControl.BorderThickness" Value="0"/>
         <Setter Property="ItemsControl.BorderBrush" Value="Blue"/>
         <Setter Property="ItemsControl.MaxWidth" Value="1200"/>
@@ -19,5 +21,19 @@
     <Style x:Key="Background">
         <Setter Property="ItemsControl.Background" Value="#FFE9EA94"/>
     </Style>
-    
+    <Style x:Key="Title">
+        <Setter Property="ItemsControl.FontSize" Value="18"/>
+        <Setter Property="ItemsControl.FontFamily" Value="ArialBlack"/>
+        <Setter Property="ItemsControl.FontWeight" Value="DemiBold"/>
+        <Setter Property="ItemsControl.Margin" Value="15"/>
+        <Setter Property="ItemsControl.Foreground" Value="DarkCyan"/>
+        <Setter Property="ItemsControl.FontStyle" Value="Italic"/>
+    </Style>
+    <Style x:Key="Text">
+        <Setter Property="ItemsControl.FontSize" Value="16"/>
+        <Setter Property="ItemsControl.FontFamily" Value="ArialBlack"/>
+        <Setter Property="ItemsControl.FontWeight" Value="ExtraBold"/>
+        <Setter Property="ItemsControl.Margin" Value="5, 0, 5, 0"/>
+        <Setter Property="ItemsControl.Foreground" Value="DarkBlue"/>
+    </Style>
 </ResourceDictionary>

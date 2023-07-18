@@ -18,25 +18,29 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=PlantImage}"/>
             <StackPanel Grid.Column="1" Style="{DynamicResource PlantName}">
-                    <TextBlock>Народное название</TextBlock>
+                <TextBlock Style="{DynamicResource Title}">Народное название</TextBlock>
                 <Border>
                     <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=PopName}"></TextBlock>
                 </Border>
-                    <TextBlock>Научное название</TextBlock>
+                <TextBlock Style="{DynamicResource Title}">Научное название</TextBlock>
                 <Border>
                     <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=ScienceName}"></TextBlock>
                 </Border>
             </StackPanel>
             <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
                 <StackPanel>
-                    <TextBlock>Описание</TextBlock>
-                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=Description}"></TextBlock>
-                    <TextBlock>Полезные свойства</TextBlock>
-                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=GoodProp}"></TextBlock>
-                    <TextBlock>Побочные эффекты</TextBlock>
-                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=BedProp}"></TextBlock>
-                    <TextBlock>Ариал обитания</TextBlock>
-                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=PlantLocation}"></TextBlock>
+                    <TextBlock Style="{DynamicResource Title}">Описание</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=Description}" Style="{DynamicResource Text}"></TextBlock>
+                    <Separator Style="{StaticResource MaterialDesignDarkSeparator}" />
+                    <TextBlock Style="{DynamicResource Title}">Полезные свойства</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=GoodProp}" Style="{DynamicResource Text}"></TextBlock>
+                    <Separator Style="{StaticResource MaterialDesignDarkSeparator}" />
+                    <TextBlock Style="{DynamicResource Title}">Побочные эффекты</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=BedProp}" Style="{DynamicResource Text}"></TextBlock>
+                    <Separator Style="{StaticResource MaterialDesignDarkSeparator}" />
+                    <TextBlock Style="{DynamicResource Title}">Ариал обитания</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path=PlantLocation}" Style="{DynamicResource Text}"></TextBlock>
+                    <Separator Style="{StaticResource MaterialDesignDarkSeparator}" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>
